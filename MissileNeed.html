@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>MissileNeed</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///C:\Users\zy\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.3.1\node_modules\@shd101wyy\mume\dependencies\katex\katex.min.css">
+      <link rel="stylesheet" href="file:///C:\Users\zy\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.3.1\node_modules\@shd101wyy\mume\dependencies\mermaid\mermaid.css">
+      
+      
+      
+      
+      <script type="text/javascript" src="file:///C:\Users\zy\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.3.1\node_modules\@shd101wyy\mume\dependencies\mermaid\mermaid.min.js"></script>
+      
+      
+      
+
+      <style> 
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+ 
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview   ">
+      <hr>
+<h2 class="mume-header" id="%E5%BA%8F%E8%A8%80">序言</h2>
+
+<p>  这些年，写了无数同一风格的八股文报告，把各种弹药、武器平台的发展历史、发展趋势写了个遍，同时也论证了无数的弹药方案，但静下心来仔细想想，我们真的了解它的历史、摸清了它的发展规律、真的能指导我们做下一个项目的策划吗？诚然，我们也会根据国内外发展的情况总结综述，得出我们看似正确的结论，但往往我们只不过是在描述和总结它的发展现象，并未弄清它的发展内在逻辑。写这篇文章，是为了跳出这个固定的思维方式，抛开具体的技术细节，从一种新的角度，把弹药、武器当作科技体[1]的一种，研究它所固有的特点及进化的规律。</p>
+<p>  哈工大2000年左右的《导弹总体设计原理》中，其中有这样的一个章节“导弹走向军转民的应用”写道，（其实这段放在现行的教材里面确实挺有现实意义）：</p>
+<blockquote>
+<p>导弹是一种现代化的武器，但就像原子弹能和平利用一样，导弹”军转民“的应用范围也十分广阔，能够创造许多奇迹。举例如下：</p>
+<ol>
+<li>空中冶炼:80年代末，地球上第一枚“炼钢导弹”在日本发射成功。该导弹舱中装有两台电炉，电炉内盛有钛、碲、钼、镍等多种元素材料。导弹发射至高空后，冶炼过程开始...。这种用导弹冶炼的合金，其强度比地面冶炼的要高2.5倍，硬度高1.85~1.9倍。</li>
+<li>导弹钻探：依靠火箭发射时喷出的高温火焰射流向地层深处“钻探”。这种高温火焰射流面前就连最硬的花岗岩也变得柔软如泥。其速度之快，质量之好令人刮目相看。</li>
+<li>导弹邮递：90年代初，英国人试验了“导弹邮递”。此法只需将导弹的弹头舱改为存放邮包就行了。当导弹飞到目的地时，“导弹邮包”便借助降落伞漂下回收。利用导弹进行快递邮寄，不仅应用前景十分广阔，而且在竞争激烈的当今世界，将发挥及其重要的作用。</li>
+<li>导弹电视：.....</li>
+</ol>
+</blockquote>
+<p>  这四点预测哪一种放在今天看都难说准确，或者说是不能再扯淡点了。为何我们会有如此糟糕的预测，或许我们太局限于技术而难以跳出技术。<em>导弹/弹药，它不是一个技术，而是技术集合的一个实体。导弹邮递的想法，我想真的比较符合目前“东风快递”，可惜人家送的确实是真的弹头</em></p>
+<p>  想借鉴凯文凯利的思想，对武器、弹药的内在发展规律进行阐述。他在《科技要什么》中描述科技为第七界生命（地球上发现的生物种类可以分为六大类，而在这六大类或说六大生物界之中，所有的物种都有着共同的生化结构），科技体的进化递增次序的轨迹与生命所遵循的轨迹相同，但也与生物界之间有重大的差异：</p>
+<blockquote>
+<ol>
+<li>科技体就等于功能变异，因为创新可以被轻易的从原点借走，或者跨越时间被赋予新的途径;</li>
+<li>科技体能够向前跳跃，略过慢慢增加的步骤，出现突然的急速进步;</li>
+<li>科技物种不像生物物种，它们几乎永远不会灭绝；</li>
+</ol>
+</blockquote>
+<p>  在过去的那些年，我们在这个领域内飞速的发展，我想这是一个必然的过程，科技体能够向前跳跃式的发展，略过慢慢增加的步骤，出现突然急速进步，这也就是某党一直说的“用二十年的时间发展赶上了西方百年的积淀”。</p>
+<p>如果从这些宏观的角度出发，我们进行研究，我们基本上能得出一个大范围时间内的发展的大致趋势，同时我们也能够很好的解释在过去这些年的发展、跃进、得与失。</p>
+<p>[1]:</p>
+<hr>
+<p>  很多的时候，我们是否应该反思下我们自己的策略，<br>
+任何事物都是在进化,宇宙、生命、道德、文化、技术无一例外，没有永远一成不变的事物，哪怕它是化石。</p>
+<ul>
+<li>写作的目的，揭示科技体的物种之一。。的内在发展规律和特点，</li>
+</ul>
+<h2 class="mume-header" id="%E7%AC%AC%E4%B8%80%E7%AB%A0-%E5%BC%B9%E8%8D%AF%E6%9E%81%E7%AE%80%E8%BF%9B%E5%8C%96%E5%8F%B2">第一章 弹药极简进化史</h2>
+
+<blockquote>
+<p>人类制度、人工制品和习惯的改变，都是渐进的、必然的、不可抵挡的。</p>
+</blockquote>
+<p>弹药是通过能量/信息的转移至目标的装置，造成目标死亡/消亡或无法正常工作。传统的如火箭弹、炮弹、导弹直至定向能武器、网络攻击我想都应该包含在上面这个定义里。首先我们来讨论下弹药进化的方向。</p>
+<h3 class="mume-header" id="1-%E5%BC%B9%E8%8D%AF%E8%BF%9B%E5%8C%96%E6%96%B9%E5%90%91">1 弹药进化方向</h3>
+
+<p>达尔文说，眼睛的演变是因为，在过去，能提供一点视力的简单眼睛为拥有者带来了生存的优势，帮助他们进行繁殖，而不是因为某人故意要获得视力。我们所有用来描述功能的说法，都采用自上而下的视角。眼睛是“为了看”，有了眼睛的存在，我们“才能”看，看之于眼睛，就如同打字之于键盘。</p>
+<p>以达尔文的观点来解释弹药的发展我也认为非常正确，我们不是为了获得某种特性的弹药而进行发展，而是因为拥有某种特性会帮助它在战争的竞争过程中取得优势。而以竞争为基础的，其必然是一个渐进演化的过程,下面我们可以来看看它发展的这一过程，而对于保证这一演化的竞争优势，主要的涵盖在这样的几个方面（射程、精度、威力/火力）。</p>
+<blockquote>
+<ol>
+<li>上百万年前，从人类诞生的开始，原始人类通过投掷石头、木棍等进行狩猎、战争，这是区别于动物采用身体肉搏的一项重要技能，具有一定的划时代意义,而投掷的石头和木棍等可以作为最原始的弹药一种；</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="2">
+<li>2.8万年前，为提升竞争优势，采用外力对弹药进行投掷，而发展最为成功的即弓箭，增加了射程并提高了精度。为进一步提升在竞争中的优势地位，逐步从把石头、木头演变成金属箭头，提升威力；采用连弩的方式提升射程、火力。</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="3">
+<li>时间一直持续到900年前，为进一步的提高弹药射程，取得在战场上的竞争又是，火药技术引入至弹药领域，发明了中国火箭。为提升火力，形成了多管火箭筒，（这与现代火箭弹的发展又何其的相似）；为提高精度，形成了火炮、带膛线的炮，让热兵器的厮杀不再靠人品。</li>
+<li>再推至六七十年前，随着对射程及精度更高的需求，发动机技术、制导控制技术引入弹药，使得射程及精度的进一步的提升。</li>
+</ol>
+</blockquote>
+<p>从上面可以看出，每一次弹药性能的提升，虽然都是技术上进行更新的结果，但确实由于竞争需求的牵引，让技术不断进行横向至纵向的迭代更新。<br>
+从人类战争史上，我们可以得出这样简单粗暴的结论，弹药/武器的代差意味着屠杀，这一点上无论是哥伦布时代的印第安人、还是近现代的中国人应该最有体会。所以世界上那些超级大国所制定的战略目标是谋求领先敌对/假想敌一代，使得在竞争中始终占有先机。所以我们不光是紧紧盯着技术的发展，而更应该考虑到现实领先的竞争需求，生存竞争的需求。<strong>压制对手，即弹药的进化方向。</strong></p>
+<p>[]参考《导弹概论》</p>
+<div class="mermaid">graph TD;
+    石头-人类诞生-->弓箭-2.8万年;
+    弓箭-2.8万年-->火药-696年;
+    火药-696年-->多管火箭-14世纪;
+    B-->D;
+    C-->D;
+</div>
+<ul>
+<li>技术的发展是一个不可逆的过程。</li>
+</ul>
+<p>参考兵器系列：火炮<br>
+口径即整理</p>
+<blockquote>
+<p>弩炮,主要向要塞投射石头<br>
+加农炮</p>
+</blockquote>
+<p>膛线——让热兵器的厮杀不再靠人品，</p>
+<p>除非你速度达到7.9km/s 否则你想脱离地球遥遥无期。</p>
+<h3 class="mume-header" id="2-%E5%90%84%E9%83%A8%E5%88%86%E6%B8%90%E8%BF%9B%E7%8B%AC%E7%AB%8B%E8%BF%9B%E5%8C%96">2 各部分渐进独立进化</h3>
+
+<p>技术的发展有其必经的路径，当单一技术条件成熟时，并不能保证其真正的应用，事实上，也很少有来得太早的技术，他们总是出现的最合情合理的那个历史瞬间。<br>
+从石器时代到如今，地球上的每一个角落，技术的故事都是这样：不管你考察什么地方，技术都庄严的从一种工具进入下一种，很少蹦蹦哒哒，也很少偏离主线，对这种路径的依赖非常明显。除非你发明了钢铁、水泥、电力和运算，理解核物理，否则开采铀矿遥遥无期。</p>
+<p>从粗略的技术层面来分析，弹药分为发射及推进、毁伤、结构及制导等多个部分，从其发展演变规律来看，由于各个部分的发展塑造了导弹，而不是导弹的发展引领了各部分的发展：</p>
+<table>
+<thead>
+<tr>
+<th>发射及推进方式</th>
+<th>机械能</th>
+<th>化学能</th>
+<th>电磁能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>典型代表产品</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>结构</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>毁伤</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>制导</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p><input type="checkbox" class="task-list-item-checkbox"> 发射推进方式的发展进化，指标---<br>
+人工投掷，射程、重量、动能；<br>
+采用弓箭设计，射程、重量动能；<br>
+采用火炮、火箭弹，射程、重量、威力等；<br>
+采用火箭发动机技术，射程、重量、威力；</p>
+</li>
+<li>
+<p><input type="checkbox" class="task-list-item-checkbox"> 结构发展---</p>
+</li>
+<li>
+<p><input type="checkbox" class="task-list-item-checkbox"> 毁伤方式---<br>
+采用动能毁伤；<br>
+采用化学能毁伤；<br>
+采用核能毁伤；</p>
+</li>
+<li>
+<p><input type="checkbox" class="task-list-item-checkbox"> 制导----<br>
+无控；<br>
+通过加工工艺、膛线等设计，提升无控精度；<br>
+简易控制；<br>
+采用惯性器件，提升制导精度；<br>
+采用导引器件，进一步提升制导精度。</p>
+</li>
+</ul>
+<blockquote>
+<p>从弓箭 ——&gt; 宋代的火箭筒 ——&gt; 朝鲜的多管火箭筒——&gt;<br>
+V1、V2火箭 ——&gt;<br>
+参考兵器系列：火箭<br>
+火箭始于9世纪的中国，12世纪中国火箭，射程320m，弹头黑火药<br>
+十五世纪，朝鲜“神机箭”，射程457m，弹头箭头和黑火药，200支火药推动的箭<br>
+射程3.3km，弹头<br>
+霍尔火箭，射程2.7km</p>
+</blockquote>
+<ul>
+<li>需要补充一个随时间变化的射程曲线，包含各中进化的武器。（其中包含精度、威力等描述，求助于python???）</li>
+</ul>
+<p>  距今约2.8万年,已经使用弓箭；火药发明后的公元969年，就用火药制成了火箭。至14世纪，为提高火箭杀伤威力，制造了一种多支火箭齐射的火箭束。</p>
+<p><strong>需要补充材料</strong></p>
+<ul>
+<li><input type="checkbox" class="task-list-item-checkbox"> 各部分独立发展的图</li>
+</ul>
+<h3 class="mume-header" id="3-%E6%8A%80%E6%9C%AF%E6%B0%B8%E4%B8%8D%E6%B6%88%E4%BA%A1%E5%8F%AA%E6%98%AF%E4%BB%A5%E4%B8%8D%E5%90%8C%E7%9A%84%E5%BD%A2%E5%BC%8F%E5%AD%98%E5%9C%A8">3 技术永不消亡，只是以不同的形式存在</h3>
+
+<hr>
+<h2 class="mume-header" id="%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E8%81%86%E5%90%AC%E5%AF%BC%E5%BC%B9%E7%9A%84%E5%A3%B0%E9%9F%B3">第二章 聆听导弹的声音</h2>
+
+<blockquote>
+<p>从性能上说，射程、威力、精度是其永恒的追求，<br>
+作为一个群体，其如何发挥作用，协同作战能力</p>
+</blockquote>
+<p><s>每一个领导感觉都有自己的想法，联系自己做的事情会想到怎么去改变，</s></p>
+<blockquote>
+<p>抛开技术细节，来<br>
+<strong>复合S曲线</strong><br>
+2005年，纪念摩尔定律40年的时候，摩尔写道：“摩尔定律其实是经济学的定律。”，摩尔定律其实就是人类的信念系统，并非物理学定律，和人类信念相关。事实上重点在于人类的活动、人类的愿景，以及你能够相信的东西。<br>
+如果飞行科技体验跟英特尔芯片一样的进步，现代的客机一架只要500美元，20分钟内就能绕地球一圈，而绕一圈只会用5加仑燃料。但飞机可能只有鞋盒大小！</p>
+</blockquote>
+<p>自然进化与人工进化之间最大的差异就是科技物种不像生物的物种，它们几乎永远都不会灭绝。所以我们能看到各种武器，第一代、第二代、第三代共存、公共装备的现状。</p>
+<hr>
+<h2 class="mume-header" id="%E7%AC%AC%E4%B8%89%E7%AB%A0-%E6%89%80%E8%B0%93%E7%9A%84%E9%A1%B6%E5%B1%82%E8%AE%BE%E8%AE%A1%E4%B8%8E%E8%A7%84%E5%88%92">第三章 所谓的顶层设计与规划</h2>
+
+<blockquote>
+<p><strong>自然界没有顶层设计，一切源于野蛮生长。 《自下而上——万物进化简史》</strong></p>
+</blockquote>
+<p>在西方的思想史上，把世界解释为上帝设计和规划的结果。就算整个世界真是上帝设计的，那么我也只相信他设计了规则和原则，而发展、演化的历程只是全由它自生自灭。就如宇宙大爆炸带来的无尽混乱与折腾，最终落入宇宙如今所展示出来的形式。</p>
+<p>是生命适应了物理定律，而不是反过来，让物理定律去适应生命。</p>
+<ul>
+<li>很多人认为，这些年这么快速的进步，得益于我们国家在整体上的策划、高瞻远瞩，</li>
+</ul>
+<p>各个部分是独立发展的，而不是有一条主线进行牵引。。。</p>
+<p>一直在想，作为总体设计，应该怎样从总体上去优化分系统，却发现确实是非常难得一件事情。计算机计算许多数的乘法应该来说是相当容易的一件事，但是要计算机去分解一个大数也是特别困难的事情，所有要求总体去引领部件发展就如同让你去分解一个大数一样，本身来说就是一件非常非常难得事情。</p>
+<p>甚至爆出“中国在研的火箭弹比全世界在研究的项目都多”，爆发式的野蛮发展是我们走向成功产业升级的必由之路。</p>
+<h2 class="mume-header" id="%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E6%8A%80%E6%9C%AF%E7%BB%88%E5%B0%86%E8%B6%8B%E5%90%8C">第四章 技术终将趋同</h2>
+
+<p>发展过冲：野蛮生长、最终趋同；百花齐放后</p>
+<h2 class="mume-header" id="%E7%AC%AC%E4%BA%94%E7%AB%A0-%E5%86%8D%E4%B9%9F%E5%9B%9E%E4%B8%8D%E5%8E%BB%E7%9A%84%E4%BD%8E%E7%AB%AF%E5%B8%82%E5%9C%BA">第五章 再也回不去的低端市场</h2>
+
+<blockquote>
+<p>表达的观点：抛开政治层面，如果时间的维度再放大一点来看待技术，所有的竞争者技术将趋同，拥有成本优势的大量下游企业将竞争占领上游企业当前的领地。<br>
+补充“西方钢铁企业的进化历史”</p>
+</blockquote>
+<p>如果我们延续20世纪50年代的有机农业，不大量的使用肥料，就需要地球82%的陆地面积来栽培作物，但我们现在的耕种的土地面积只占38%。<br>
+我们不会照现在的样子走下去。面对明天的问题时，我们用的是明天的工具，而不是今天的。这就是所谓的进步。</p>
+<h2 class="mume-header" id="%E7%AC%AC%E5%85%AD%E7%AB%A0-%E5%86%B2%E7%AA%81">第六章 冲突</h2>
+
+<p><strong>对于领先的企业，更没有必要冒这种风险。谚语说，If it works, don't fix it</strong>！<strong>只有落后者，光脚不怕穿鞋的，反而可以冒这个险。冒险至少还有赢的机会，不冒险就输定了。</strong></p>
+<h2 class="mume-header" id="%E7%AC%AC%E5%85%AD%E7%AB%A0-%E6%96%B9%E5%90%91">第六章 方向</h2>
+
+<blockquote>
+<p>人类文化的发展，是渐进的、增量的、无预定方向的、自然发生的,并受种种竞争理念自然选择推动。</p>
+</blockquote>
+<h2 class="mume-header" id="%E9%A2%98%E5%90%8E%E8%AE%B0">题后记</h2>
+
+
+      </div>
+      <div class="md-sidebar-toc"><ul>
+<li><a href="#%E5%BA%8F%E8%A8%80">序言</a></li>
+<li><a href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E5%BC%B9%E8%8D%AF%E6%9E%81%E7%AE%80%E8%BF%9B%E5%8C%96%E5%8F%B2">第一章 弹药极简进化史</a>
+<ul>
+<li><a href="#1-%E5%BC%B9%E8%8D%AF%E8%BF%9B%E5%8C%96%E6%96%B9%E5%90%91">1 弹药进化方向</a></li>
+<li><a href="#2-%E5%90%84%E9%83%A8%E5%88%86%E6%B8%90%E8%BF%9B%E7%8B%AC%E7%AB%8B%E8%BF%9B%E5%8C%96">2 各部分渐进独立进化</a></li>
+<li><a href="#3-%E6%8A%80%E6%9C%AF%E6%B0%B8%E4%B8%8D%E6%B6%88%E4%BA%A1%E5%8F%AA%E6%98%AF%E4%BB%A5%E4%B8%8D%E5%90%8C%E7%9A%84%E5%BD%A2%E5%BC%8F%E5%AD%98%E5%9C%A8">3 技术永不消亡，只是以不同的形式存在</a></li>
+</ul>
+</li>
+<li><a href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E8%81%86%E5%90%AC%E5%AF%BC%E5%BC%B9%E7%9A%84%E5%A3%B0%E9%9F%B3">第二章 聆听导弹的声音</a></li>
+<li><a href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E6%89%80%E8%B0%93%E7%9A%84%E9%A1%B6%E5%B1%82%E8%AE%BE%E8%AE%A1%E4%B8%8E%E8%A7%84%E5%88%92">第三章 所谓的顶层设计与规划</a></li>
+<li><a href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E6%8A%80%E6%9C%AF%E7%BB%88%E5%B0%86%E8%B6%8B%E5%90%8C">第四章 技术终将趋同</a></li>
+<li><a href="#%E7%AC%AC%E4%BA%94%E7%AB%A0-%E5%86%8D%E4%B9%9F%E5%9B%9E%E4%B8%8D%E5%8E%BB%E7%9A%84%E4%BD%8E%E7%AB%AF%E5%B8%82%E5%9C%BA">第五章 再也回不去的低端市场</a></li>
+<li><a href="#%E7%AC%AC%E5%85%AD%E7%AB%A0-%E5%86%B2%E7%AA%81">第六章 冲突</a></li>
+<li><a href="#%E7%AC%AC%E5%85%AD%E7%AB%A0-%E6%96%B9%E5%90%91">第六章 方向</a></li>
+<li><a href="#%E9%A2%98%E5%90%8E%E8%AE%B0">题后记</a></li>
+</ul>
+</div>
+      <a id="sidebar-toc-btn">≡</a>
+    </body>
+    
+    <script>
+// config mermaid init call
+// http://knsv.github.io/mermaid/#configuration
+//
+// You can edit the 'MERMAID_CONFIG' variable below.
+MERMAID_CONFIG = {
+  startOnLoad: false
+}
+
+if (window['MERMAID_CONFIG']) {
+  window['MERMAID_CONFIG'].startOnLoad = false
+  window['MERMAID_CONFIG'].cloneCssStyles = false 
+}
+mermaidAPI.initialize(window['MERMAID_CONFIG'] || {})
+
+if (typeof(window['Reveal']) !== 'undefined') {
+  function mermaidRevealHelper(event) {
+    var currentSlide = event.currentSlide
+    var diagrams = currentSlide.querySelectorAll('.mermaid')
+    for (var i = 0; i < diagrams.length; i++) {
+      var diagram = diagrams[i]
+      if (!diagram.hasAttribute('data-processed')) {
+        mermaid.init(null, diagram, ()=> {
+          Reveal.slide(event.indexh, event.indexv)
+        })
+      }
+    }
+  }
+
+  Reveal.addEventListener('slidechanged', mermaidRevealHelper)
+  Reveal.addEventListener('ready', mermaidRevealHelper)
+} else {
+  mermaid.init(null, document.getElementsByClassName('mermaid'))
+}
+</script>
+    
+    
+    
+    <script>
+(function bindTaskListEvent() {
+  var taskListItemCheckboxes = document.body.getElementsByClassName('task-list-item-checkbox')
+  for (var i = 0; i < taskListItemCheckboxes.length; i++) {
+    var checkbox = taskListItemCheckboxes[i]
+    var li = checkbox.parentElement
+    if (li.tagName !== 'LI') li = li.parentElement
+    if (li.tagName === 'LI') {
+      li.classList.add('task-list-item')
+    }
+  }
+}())    
+</script>
+    
+<script>
+
+var sidebarTOCBtn = document.getElementById('sidebar-toc-btn')
+sidebarTOCBtn.addEventListener('click', function(event) {
+  event.stopPropagation()
+  if (document.body.hasAttribute('html-show-sidebar-toc')) {
+    document.body.removeAttribute('html-show-sidebar-toc')
+  } else {
+    document.body.setAttribute('html-show-sidebar-toc', true)
+  }
+})
+</script>
+      
+  </html>
