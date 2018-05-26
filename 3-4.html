@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>3-4</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///C:\Users\zy\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.3.2\node_modules\@shd101wyy\mume\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+      <style> 
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+ 
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview   ">
+      <h2 class="mume-header" id="%E7%AC%AC%E4%B8%89%E7%AB%A0-%E6%8A%80%E6%9C%AF%E7%BB%88%E5%B0%86%E8%B6%8B%E5%90%8C">第三章 技术终将趋同</h2>
+
+<blockquote>
+<p><strong>技术的扩散符合热力学第二定律</strong>，总是由高技术的领先企业向落后的企业扩散，但这些企业的技术最终趋同。但与热力学不一样的是，在趋同后，技术不会像热力学那样一片死寂，它仍有可能像宇宙大爆炸一样无中生有的再次爆发、再次扩散，让技术的发展持续不断的进步。</p>
+</blockquote>
+<h3 class="mume-header" id="1-%E5%A5%A5%E5%8D%A1%E5%A7%86%E5%89%83%E5%88%80">1 奥卡姆剃刀</h3>
+
+<ul>
+<li>
+<p>Do not multiply entities beyond necessity, but also do not reduce them beyond necessity.</p>
+</li>
+<li>
+<p>对一战、二战整个过程中出现的口径、弹药，再到目前世界口径弹药的格局进行梳理，发现这弹药的竞争如同生物竞争一样，百花齐放后最终归于沉寂。技术终将趋同。</p>
+</li>
+</ul>
+<h2 class="mume-header" id="%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E5%86%8D%E4%B9%9F%E5%9B%9E%E4%B8%8D%E5%8E%BB%E7%9A%84%E4%BD%8E%E7%AB%AF%E5%B8%82%E5%9C%BA">第四章 再也回不去的低端市场</h2>
+
+<blockquote></blockquote>
+<h3 class="mume-header" id="1-%E9%80%BC%E4%B8%8A%E9%AB%98%E7%AB%AF">1 逼上高端</h3>
+
+<p>  借用《创新者的窘境》里的一个案例，讲讲我们是怎么被赶向高端市场，而又心甘情愿的放弃低端市场。这个案例虽然讲的是钢铁行业，但并不仅仅适用于钢铁行业，如果仔细的想想，所有的行业都是这样。</p>
+<blockquote>
+<p>  在20世纪60年代时，小型钢铁厂生产出的钢铁质量很差，因为它使用的原料是废钢，因此小型钢铁厂唯一能找到的一个市场可能就是钢筋（螺纹钢）市场了——它在质量、成本和利润率等方面均处于市场最底端。对成熟企业而言，这是最没吸引力的一块市场，这个市场利润率很低，综合性钢铁制造商几乎是迫不及待地摆脱螺纹钢业务。但小型钢铁厂其成本结构与综合性钢铁厂截然不同：折旧率极低，没有研究和开发成本，销售、管理开支很低，还能从中赢利。<br>
+  一旦在螺纹钢市场站稳了脚跟，那些最野心勃勃的小型钢铁厂，便会以与综合性钢铁厂完全不同的视野来看待整个钢铁市场。小型钢铁厂占据的螺纹钢低端市场对综合性钢铁厂完全不具有吸引力，而小型钢铁厂对高端市场的看法却是，获取更大利润、更大销售额的机遇就在它们的上方。在利益的刺激下，小型钢铁厂会努力提高产品的冶金质量和强度，并加大对设备的投资以生产出更多的产品。<br>
+  正如图中的轨线图所表明的那样，小型钢铁厂接下来立即对位于它们上方的大型钢条、棒材和角钢市场发起了冲击。到1980年，小型钢铁厂已经占据了螺纹钢市场90%的市场份额，以及钢条、棒材和角钢市场30%的份额。在小型钢铁厂发动进攻时，钢条、棒材和角钢是综合性钢铁厂生产线上利润率最低的产品。因此，综合性钢铁制造商再次几乎迫不及待地摆脱了这项业务，到20世纪80年代中期，这个市场已经完全是小型钢铁厂的天下了。<br>
+  一旦小型钢铁厂在钢条、棒材和角钢市场上的地位得以确立，它们便继续向更高端的市场进攻，这一次它们的目标是结构性钢梁市场。1995年，综合性钢铁制造商伯利恒公司关闭了旗下最后一家结构性钢梁工厂，将这块市场拱手让给了小型钢铁厂。<br>
+<img src="http://p.ananas.chaoxing.com/star3/origin/568cb255e4b0e85354b46033.jpg" alt="&apos;&#x7834;&#x574F;&#x6027;&#x5C0F;&#x578B;&#x94A2;&#x94C1;&#x5382;&#x94A2;&#x94C1;&#x6280;&#x672F;&#x7684;&#x53D1;&#x5C55;&#x8F68;&#x8FF9;&apos;"></p>
+</blockquote>
+<p>  抛开政治层面，如果时间的维度再放大一点来看待技术，所有的竞争者技术将趋同，而拥有成本优势的大量下游企业将竞争占领上游企业当前的领地。以这样的观点来分析弹药/武器行业的现状，把时间的维度放大点，我们可以作如下推测：民企首先只能接一些军工研究所不干的活，比如说零件、电路、结构件等加工生产之类；一旦在这些低端市场站稳了脚跟，那些最野心勃勃的民营企业，便会以军工研究所完全不同的视野来看待整个行业。民营企业占据的低端市场对军工研究所完全不具有吸引力，而民营企业对高端市场的看法却是，获取更大利润、更大机遇就在它们的上方。所以民营企业会不断的向这个行业的高端市场发起冲击，从零部件加工至部件生再到总体设计与系统集成。这一过程在弹药/武器行业其实正在上演，不管你怎样努力、加班加点，这种单位组织形式的差异、结构成本的差异注定了民企必然会一次一次的向这个领域发起冲击。同样的道理，军工系统内部一样存在这样的挑战与竞争，很多人会认为这是无序的竞争，但如果真的以战场为导向，竞争绝对不会是无序，而是通过战场这个市场对技术和企业进行梳理，这往往对于行业是好的，就如生物一样被自然界给无情的梳理，生存下来的必定是最适合的。<br>
+  很多时候在想，如果一个产品，如果技术已经成熟到泛滥，我们应固守原有的市场，还是囤积资本向更高端的市场突围？我想作为一个企业、单位的领导者必须要面对的问题，不管谁做这样的决策，应该都离不开强有力的数据支撑。能否继续干原有的低端市场，取决的是比你更具有成本优势的企业是否已经能和你竞争，如果能，那这个市场早晚都是要丢掉的，而如果不能，给对手设置障碍、继续在里面赚取利润；其实这条原则反过来也适用，如果你作为下游的企业具备向高端市场突围的技术能力，那么成本优势将是压垮那些上游企业的最致命一击。在竞争上，技术层面是一个层次，但以大维度时间来看待技术，技术终将趋同，这一点看我们国家是怎么追赶欧美的就能体会到，时间必将技术水平拉齐，而具有数量优势、成本优势、或者说是能接受更低利润的才能生存。所以我们可以回看我们曾经做过而现在放弃的事，并不是别人逼着你放弃，而是你主动的放弃、走向更重要利润更高的领域。</p>
+<h3 class="mume-header" id="2-%E4%BD%8E%E7%AB%AF%E5%B8%82%E5%9C%BA%E7%9A%84%E5%9B%B0%E5%A2%83">2 低端市场的困境</h3>
+
+<p>  我们有幸在这样的变革时代，见证这追赶过程的这一段一段历史，看看时间是怎样淘汰那些原来领先的企业，而那些企业又是怎么一步步被历史遗忘。这些年，去过很多兵工厂，给我带来了无法磨灭的印象的有三件事。</p>
+<blockquote>
+<p>  第一件事是去南方某工厂，在那做测试，我们抱怨他们的技术工人怎么什么都不会，他们工头说“她会打字，这都是技术工种了”。这些年，南方的经济发展对这些体制内工厂的冲击巨大，造成技术人员的流失，一旦连技术都没有的工厂，等待的命运除了被施舍，只有淘汰。<br>
+  第二件事是去东北某厂，据说这个“单位平均年龄49了”，我想再过10年那单位也就都该撤了吧，一个暮气沉沉的企业能有发展？<br>
+  再一件就是去西南某厂，和来接机的师傅在车上闲聊，他说他工作30多年，每个月才拿1700块，在这个房价如此高的年代，这么低的工资，生存尚难谈何发展。</p>
+</blockquote>
+<p>  去的这三个地方南方、东北、西南，或许也代表了不同地方所面临的不同形式与问题，但内容的实质却是相同，<strong>发展困境</strong>，低端技术市场所面临的问题。我们往往关心的是那些行业巨头的轰然倒塌，报道他们由成功走向失败的历程，但是有更多谈不上成功就倒下去的企业，一直就作为低端技术市场的代表，仅仅某一次小小的失败就可能导致崩溃。</p>
+
+      </div>
+      <div class="md-sidebar-toc"><ul>
+<li><a href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E6%8A%80%E6%9C%AF%E7%BB%88%E5%B0%86%E8%B6%8B%E5%90%8C">第三章 技术终将趋同</a>
+<ul>
+<li><a href="#1-%E5%A5%A5%E5%8D%A1%E5%A7%86%E5%89%83%E5%88%80">1 奥卡姆剃刀</a></li>
+</ul>
+</li>
+<li><a href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E5%86%8D%E4%B9%9F%E5%9B%9E%E4%B8%8D%E5%8E%BB%E7%9A%84%E4%BD%8E%E7%AB%AF%E5%B8%82%E5%9C%BA">第四章 再也回不去的低端市场</a>
+<ul>
+<li><a href="#1-%E9%80%BC%E4%B8%8A%E9%AB%98%E7%AB%AF">1 逼上高端</a></li>
+<li><a href="#2-%E4%BD%8E%E7%AB%AF%E5%B8%82%E5%9C%BA%E7%9A%84%E5%9B%B0%E5%A2%83">2 低端市场的困境</a></li>
+</ul>
+</li>
+</ul>
+</div>
+      <a id="sidebar-toc-btn">≡</a>
+    </body>
+    
+    
+    
+    
+    
+    <script>
+(function bindTaskListEvent() {
+  var taskListItemCheckboxes = document.body.getElementsByClassName('task-list-item-checkbox')
+  for (var i = 0; i < taskListItemCheckboxes.length; i++) {
+    var checkbox = taskListItemCheckboxes[i]
+    var li = checkbox.parentElement
+    if (li.tagName !== 'LI') li = li.parentElement
+    if (li.tagName === 'LI') {
+      li.classList.add('task-list-item')
+    }
+  }
+}())    
+</script>
+    
+<script>
+
+var sidebarTOCBtn = document.getElementById('sidebar-toc-btn')
+sidebarTOCBtn.addEventListener('click', function(event) {
+  event.stopPropagation()
+  if (document.body.hasAttribute('html-show-sidebar-toc')) {
+    document.body.removeAttribute('html-show-sidebar-toc')
+  } else {
+    document.body.setAttribute('html-show-sidebar-toc', true)
+  }
+})
+</script>
+      
+  </html>
